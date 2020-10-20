@@ -30,6 +30,9 @@ public class BookRomance extends Book {
     @Override
     public int calcLateFees(int numOfDaysPastDue) {
         // homework
+        if (numOfDaysPastDue < 0) {
+            numOfDaysPastDue = 0;
+        }
         return numOfDaysPastDue * lateFeePerDayInDollar;
     }
 }

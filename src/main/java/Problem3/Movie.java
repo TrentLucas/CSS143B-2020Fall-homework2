@@ -34,7 +34,7 @@ public abstract class Movie implements StoreMediaOperations {
         }
         Movie that = (Movie) obj;
         System.out.println(that.id + "   " + this.id);
-        if (that.id == this.id) {
+        if (this.id == that.id) {
             return true;
         } else {
             return false;
