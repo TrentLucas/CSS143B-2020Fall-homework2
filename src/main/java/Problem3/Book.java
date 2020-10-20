@@ -7,6 +7,11 @@ public abstract class Book implements StoreMediaOperations {
     String title;
     String author;
 
+    //Added this constructor for the sub classes of Book to work
+    public Book() {
+        this.id = UUID.randomUUID();
+    }
+
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
@@ -16,10 +21,22 @@ public abstract class Book implements StoreMediaOperations {
     // copy constructor
     public Book(Book anotherBook) {
         // homework
+        this.title = anotherBook.title;
+        this.author = anotherBook.author;
+        this.id = UUID.randomUUID();
     }
 
     @Override
     public boolean equals(Object obj) {
         // homework
+        if (obj == null || !(obj instanceof Book)) {
+            return false;
+        }
+        Book that = (Book) obj;
+        if (that.id == this.id) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
