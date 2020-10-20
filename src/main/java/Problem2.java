@@ -13,6 +13,9 @@ public class Problem2 {
     // Do not change signature (function name, parameters and return type)
     // Do not use extra space for another array. Solution to be in-pace with O(1) extra memory
     public static int remove(int[] nums) {
+        if(nums.length == 0) {
+            return 0;
+        }
         ArrayList<Integer> numsList = new ArrayList<Integer>();
         for (int i = 0; i < nums.length; i++) {
             numsList.add(nums[i]);
