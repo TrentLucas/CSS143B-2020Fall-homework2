@@ -19,7 +19,7 @@ public class BookRomance extends Book {
         // tip: use the 'super' keyword
         super.title = anotherBook.title;
         super.author = anotherBook.author;
-        super.id = UUID.randomUUID();
+        super.id = anotherBook.id;
     }
 
     @Override

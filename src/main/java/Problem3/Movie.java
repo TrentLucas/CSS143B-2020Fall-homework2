@@ -21,7 +21,7 @@ public abstract class Movie implements StoreMediaOperations {
 
     public Movie(Movie anotherMovie) {
         // homework
-        this.id = UUID.randomUUID();
+        this.id = anotherMovie.id;
         this.rating = anotherMovie.rating;
         this.title = anotherMovie.title;
     }
@@ -33,7 +33,6 @@ public abstract class Movie implements StoreMediaOperations {
             return false;
         }
         Movie that = (Movie) obj;
-        System.out.println(that.id + "   " + this.id);
         if (this.id == that.id) {
             return true;
         } else {

@@ -18,7 +18,7 @@ public class MovieComedy extends Movie {
         // tip: use the 'super' keyword
         super.title = anotherMovie.title;
         super.rating = anotherMovie.rating;
-        super.id = UUID.randomUUID();
+        super.id = anotherMovie.id;
     }
 
     @Override

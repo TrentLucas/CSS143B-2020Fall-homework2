@@ -23,7 +23,7 @@ public abstract class Book implements StoreMediaOperations {
         // homework
         this.title = anotherBook.title;
         this.author = anotherBook.author;
-        this.id = UUID.randomUUID();
+        this.id = anotherBook.id;
     }
 
     @Override
